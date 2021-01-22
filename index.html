@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Session: Front-End with JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <div id="maze"></div>
+
+        <form>
+            <label for="display-name">Your Name:</label>
+            <input
+                type="text"
+                name="player-name"
+                placeholder="What shall we call you?">
+
+            <label for="date-of-birth">Date of Birth:</label>
+            <input
+                type="date"
+                name="date-of-birth"
+                value="2000-01-01">
+
+            <label for="favorite-color">Favorite Color:</label>
+            <input
+                type="color"
+                name="favorite-color"
+                value="#ffd700">
+            
+            <button>Play!</button>
+        </form>
+
+        <div id="winning-message-box">YOU WON!</div>
+    </main>
+
+
+    <script src="maze-create.js"></script>
+    <script src="maze-movements.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

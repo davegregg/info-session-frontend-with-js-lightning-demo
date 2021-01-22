@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+form > input {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+html {
+    font-size: 2ex;
+    --cell-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 4rem;
+}
+
+#maze {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 4rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    height: var(--cell-size);
+    width: var(--cell-size);
+}
+
+.cell[data-cell-type="█"] {
+    background: black;
+}
+
+.cell[data-cell-type="░"] {
+    background: darkgrey;
+    border: 1px dotted white;
+}
+
+.cell[data-cell-type="S"] {
+    background: blue;
+}
+
+.cell[data-cell-type="F"] {
+    background: red;
+}
+
+#player {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    background: gold;
+}
+
+#winning-message-box {
+    display: none;
+}
+
+#winning-message-box.you-won {
+    display: block;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    font-size: 12rem;
+    background: rgba(255, 255, 255, 0.5);
+}
