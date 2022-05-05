@@ -12,6 +12,10 @@ html {
     --cell-size: 1.5rem;
 }
 
+body {
+    background: lavender;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -36,10 +40,14 @@ main {
 .cell {
     height: var(--cell-size);
     width: var(--cell-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted black;
 }
 
 .cell[data-cell-type="█"] {
-    background: black;
+    background: darkslategray;
 }
 
 .cell[data-cell-type="░"] {
@@ -48,17 +56,29 @@ main {
 }
 
 .cell[data-cell-type="S"] {
-    background: blue;
+    background: cadetblue;
 }
 
 .cell[data-cell-type="F"] {
-    background: red;
+    background: blueviolet;
+}
+
+@keyframes rotate {
+      0% { transform: rotate(0deg);   }
+     50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
 }
 
 #player {
-    height: var(--cell-size);
-    width: var(--cell-size);
-    background: gold;
+    height: calc(var(--cell-size) - 10%);
+    width: calc(var(--cell-size) - 10%);
+    animation: rotate 1s linear;
+    background-image: linear-gradient(
+        105deg, 
+        mediumvioletred 39%, 
+        rgb(213, 90, 168) 96%
+    );
+    border-radius: 50%;
 }
 
 #winning-message-box {

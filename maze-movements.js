@@ -7,8 +7,8 @@ function finishCellReached (cell) {
 }
 
 function youWon () {
-    winnerMessageElement.classList.add("you-won")
-    winnerMessageElement.prepend(`${playerName.value}, `)
+    winnerMessage.classList.add("you-won")
+    winnerMessage.prepend(`${playerName.value || "Player"}, `)
 }
 
 function moveRight () {

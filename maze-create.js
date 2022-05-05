@@ -25,7 +25,7 @@ let maze = document.querySelector("#maze")
 let player = document.createElement("div")
 player.id = "player"
 
-let winnerMessageElement = document.querySelector("#winning-message-box")
+let winnerMessage = document.querySelector("#winning-message-box")
 
 function createRow (rowMap) {
     let rowElement = document.createElement("div")

@@ -2,16 +2,19 @@ let playButton = document.querySelector("form > button")
 
 function handleClick (event) {
     console.log(colorPicker.value)
-    player.style.backgroundColor = colorPicker.value // Rewrite this line in front of the attendees, focusing on the reading order of the words in the line. Don't overlook the punctuation marks. Draw a bit of attention to them, but assure the attendees that they'll get used to grammar before long.
+    // When the user clicks on the "Play!" button, 
+    // how do we update the color of the winner message
+    // based on the user-selected color from the color picker?
+    winnerMessage.style.color = colorPicker.value
+    winnerMessage.style.textShadow = `0px 0px 5px ${colorPicker.value}`
 }
 
 function handleKeypress (event) {
-    // Start with the body of this function empty
-    // Focus on the simple logic flow
+    // What do we want to happen when the user presses a key on their keyboard?
     if (event.key === "ArrowRight") {
         moveRight()
     }
-    
+
     if (event.key === "ArrowLeft") {
         moveLeft()
     }
@@ -25,11 +28,5 @@ function handleKeypress (event) {
     }
 }
 
-// These lines should be pre-written.
-// Draw attention to the names of the callbacks:
-// these I picked for myself. For most of the OTHER "words"
-// in this code, they are common to all HTML elements
-// and can be found with IntelliSense in VS Code
-// and online with a quick search.
 playButton.addEventListener("click", handleClick)
 document.addEventListener("keydown", handleKeypress)
